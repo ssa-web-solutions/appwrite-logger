@@ -1,6 +1,6 @@
 <?php
 
-namespace SSAWeb\AppwriteTestUtils;
+namespace SSAWeb\AppwriteLogger;
 
 use Appwrite\Services\Functions;
 
