@@ -1,0 +1,26 @@
+{
+    "projectId": "proj-devdb",
+    "projectName": "DevDB",
+    "functions": [
+        {
+            "$id": "fnLogger",
+            "name": "Logger",
+            "runtime": "node-18.0",
+            "execute": [
+                "users"
+            ],
+            "events": [],
+            "schedule": "",
+            "timeout": 60,
+            "enabled": true,
+            "logging": false,
+            "entrypoint": "src/index.js",
+            "commands": "npm install",
+            "ignore": [
+                "node_modules",
+                ".npm"
+            ],
+            "path": "functions/Logger"
+        }
+    ]
+}

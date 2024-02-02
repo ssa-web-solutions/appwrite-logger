@@ -1,0 +1,19 @@
+{
+    "name": "ssaweb/appwrite-logger",
+    "description": "This is a package responsible for calling a logger function made in appwrite",
+    "require": {
+        "appwrite/appwrite": "^10.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "SSAWeb\\AppwriteLogger\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lucas Reis",
+            "email": "lucas@mreis.dev"
+        }
+    ]
+}
