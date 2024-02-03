@@ -14,9 +14,12 @@ class Logger {
         if (!empty($tags)) {
             $body['tags'] = implode(',', $tags);
         }
+        if (!empty($params)) {
+            $body['params'] = $params;
+        }
         $this->functions->createExecution(
             'fnLogger',
-            json_encode(array_merge($params, $body)),
+            json_encode($body),
             async: true,
             method: 'POST',
             headers: ['content-type' => 'application/json']
