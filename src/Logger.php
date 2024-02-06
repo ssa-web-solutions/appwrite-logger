@@ -5,8 +5,11 @@ namespace SSAWeb\AppwriteLogger;
 use Appwrite\Services\Functions;
 
 class Logger {
+    private readonly string $cid;
     public function __construct(private readonly Functions $functions)
-    {}
+    {
+        $this->cid = uniqid('cid_');
+    }
 
     public function log(string $message, array $params = [], array $tags = [])
     {
@@ -14,8 +17,9 @@ class Logger {
         if (!empty($tags)) {
             $body['tags'] = implode(',', $tags);
         }
+        $body['params'] = ['cid' => $this->cid];
         if (!empty($params)) {
-            $body['params'] = $params;
+            $body['params'] = array_merge($params, $body['params']);
         }
         $this->functions->createExecution(
             'fnLogger',
