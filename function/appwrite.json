@@ -5,7 +5,7 @@
         {
             "$id": "fnLogger",
             "name": "Logger",
-            "runtime": "node-18.0",
+            "runtime": "node-21.0",
             "execute": [
                 "users"
             ],
