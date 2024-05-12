@@ -3,6 +3,7 @@
 namespace SSAWeb\AppwriteLogger;
 
 use Appwrite\Services\Functions;
+use Appwrite\Enums\ExecutionMethod;
 
 class Logger {
     private readonly string $cid;
@@ -25,7 +26,7 @@ class Logger {
             'fnLogger',
             json_encode($body),
             async: true,
-            method: 'POST',
+            method: ExecutionMethod::POST(),
             headers: ['content-type' => 'application/json']
         );
     }
